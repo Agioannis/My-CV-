@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Το Βιογραφικό μου</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Top Controls -->
+        <div class="top-controls">
+            <button id="theme-toggle" class="theme-toggle">🌙 Σκούρο Θέμα</button>
+            <a href="cv.pdf" class="download-btn" download>📄 Λήψη CV</a>
+            <button id="lang-toggle" class="lang-toggle">EN 🇬🇧</button>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQH4vBcxDs4HSg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1699375580329?e=1758758400&v=beta&t=ZWd_QjjlVR9tj5kYgaEgsMPr1TQqkfpBi2Rt6b-zn2E"
+                alt="Φωτογραφία Προφίλ" class="profile-pic">
+            <h1 class="name" data-lang="name">Ιωάννης Αγγελάκης</h1>
+            <p class="tagline" data-lang="tagline">Fullstack Developer (Φοιτητής)</p>
+            <div class="links">
+                <a href="mailto:you@email.com" data-lang="email">Email</a>
+                <a href="https://www.linkedin.com/in/ioannis-angelakis-0587a8266" data-lang="linkedin">LinkedIn</a>
+                <a href="https://github.com/yourusername" data-lang="github">GitHub</a>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section>
+            <h2 data-lang="about-title">Σχετικά με εμένα</h2>
+            <p data-lang="about-text">
+                Είμαι φοιτητής Πληροφορικής και μελλοντικός Fullstack Developer, με πάθος
+                για τον προγραμματισμό και την ανάπτυξη web εφαρμογών. Έχω εμπειρία σε
+                ακαδημαϊκά projects και προσωπικά project μάθησης, χρησιμοποιώντας τεχνολογίες
+                όπως JavaScript, React, Node.js, HTML/CSS και βάσεις δεδομένων.
+                Αναζητώ την πρώτη μου επαγγελματική ευκαιρία για να εφαρμόσω τις γνώσεις μου
+                και να εξελιχθώ ως προγραμματιστής.
+            </p>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2 data-lang="exp-title">Εμπειρία</h2>
+            <div class="card">
+                <p class="meta" data-lang="exp-text">Δεν έχω ακόμα επαγγελματική εμπειρία στον χώρο.</p>
+                <p data-lang="exp-note">Εργάζομαι όμως σε ακαδημαϊκά και προσωπικά project για να αναπτύξω
+                    πρακτικές δεξιότητες.</p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2 data-lang="edu-title">Εκπαίδευση</h2>
+            <div class="card">
+                <h3 data-lang="edu-degree">Πτυχίο Πληροφορικής - Δημοκρίτειο Πανεπιστήμιο Θράκης</h3>
+                <p class="meta" data-lang="edu-date">2019 – σήμερα | Καβάλα</p>
+                <p data-lang="edu-note">(Αναμένεται ολοκλήρωση: 2026)</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2 data-lang="skills-title">Δεξιότητες</h2>
+            <div class="skills">
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>HTML & CSS</span>
+                <span>SQL / MongoDB</span>
+                <span>Git / GitHub</span>
+                <span>REST APIs</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer data-lang="footer">
+            © 2025 Ioannis Angelakis. Όλα τα δικαιώματα διατηρούνται.
+        </footer>
+
+    </div>
+
+    <!-- Dark Mode Script -->
+    <script>
+        const toggleBtn = document.getElementById("theme-toggle");
+        const body = document.body;
+
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark");
+            toggleBtn.textContent = "☀️ Φωτεινό Θέμα";
+        }
+
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("dark");
+            if (body.classList.contains("dark")) {
+                toggleBtn.textContent = "☀️ Φωτεινό Θέμα";
+                localStorage.setItem("theme", "dark");
+            } else {
+                toggleBtn.textContent = "🌙 Σκούρο Θέμα";
+                localStorage.setItem("theme", "light");
+            }
+        });
+    </script>
+
+    <!-- Translation Script -->
+    <script src="translate.js"></script>
+
+</body>
+
+</html>

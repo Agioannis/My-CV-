@@ -1,0 +1,206 @@
+/* ===== Variables ===== */
+:root {
+    --bg: #f8f9fa;
+    --text: #333;
+    --card-bg: #f9f9f9;
+    --link: #0077b6;
+    --link-hover: #023e8a;
+    --skill-bg: #e0f2fe;
+    --skill-text: #0369a1;
+    --footer: #777;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #eaeaea;
+    --card-bg: #1e1e1e;
+    --link: #90cdf4;
+    --link-hover: #63b3ed;
+    --skill-bg: #1e3a8a;
+    --skill-text: #bfdbfe;
+    --footer: #aaa;
+}
+
+/* ===== General Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: background 0.4s ease, transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== Theme Toggle Button ===== */
+.theme-toggle,
+.download-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--link);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.theme-toggle:hover,
+.download-btn:hover {
+    transform: scale(1.05);
+    background: var(--link-hover);
+}
+
+/* ===== Header ===== */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.tagline {
+    color: var(--footer);
+    margin-bottom: 0.5rem;
+}
+
+.links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--link);
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.links a:hover {
+    color: var(--link-hover);
+    transform: translateY(-2px);
+}
+
+/* ===== Sections ===== */
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+p,
+ul {
+    margin-top: 0.5rem;
+}
+
+/* ===== Cards ===== */
+.card {
+    background: var(--card-bg);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: var(--footer);
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Skills ===== */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skills span {
+    background: var(--skill-bg);
+    color: var(--skill-text);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.skills span:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    color: var(--footer);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+    transition: color 0.4s ease;
+}
+
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.lang-toggle {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--link);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.lang-toggle:hover {
+    transform: scale(1.05);
+    background: var(--link-hover);
+}
